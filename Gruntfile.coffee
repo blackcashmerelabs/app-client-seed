@@ -160,10 +160,10 @@ module.exports = (grunt) ->
           # todo: generate unique from contents of file for each file..
           buildNumber: 47878
       build:
-        src:  "#{BUILD_WORKING_DIR}/index.html"
+        src:  ["#{BUILD_WORKING_DIR}/*.html"]
         dest: "#{BUILD_DIST_DIR}/"
 
-    # minify the HTML file (index.html)
+    # minify html files
     htmlmin:
       index:
         options:
@@ -171,6 +171,7 @@ module.exports = (grunt) ->
           collapseWhitespace: true
         files:
           "build/dist/index.html": "#{BUILD_DIST_DIR}/index.html"
+          "build/dist/login.html": "#{BUILD_DIST_DIR}/login.html"
 
     # minify the js file to be as small as possible
     uglify:

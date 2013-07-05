@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <title>app-client-seed</title>
+  <!-- build:css app.css -->
+  <link rel="stylesheet" href="styles/app.css"/>
+  <!-- endbuild -->
+</head>
+<body>
+  <ul class="menu">
+    <li><a href="#/view1">view1</a></li>
+    <li><a href="#/view2">view2</a></li>
+  </ul>
+
+  <div ng-view></div>
+  <div>app-client-seed: v<span app-version></span></div>
+
+  <!-- build:js vendor.js -->
+  <script src="../vendor/angular/angular.js"></script>
+  <script src="../vendor/angular/angular-resource.min.js"></script>
+  <!-- endbuild -->
+
+  <!-- build:js app.js -->
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controllers/one-ctrl.js"></script>
+  <script src="scripts/controllers/two-ctrl.js"></script>
+  <script src="scripts/directives/version-directive.js"></script>
+  <script src="scripts/filters/version-filter.js"></script>
+  <script src="scripts/services/user.js"></script>
+  <script src="scripts/services/version-service.js"></script>
+  <!-- endbuild -->
+
+  <!-- build:remove -->
+  <script type="text/javascript">
+    document.write('<script src=\"http://'
+      + (location.host || 'localhost').split(':')[0]
+      + ':35729/livereload.js?snipver=1\"><\/script>')
+  </script>
+  <!-- endbuild -->
+</body>
+</html>
